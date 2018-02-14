@@ -23,20 +23,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}  
-      - run:
-          name: start the emulator
-          command: emulator -avd circleci-android26 -no-audio -no-window:
-          background: true
-      - run:
-          name: wait for it to have booted
-          command: circle-android wait-for-boot
-      - run:
-          name:unlock the emulator screen
-          command: sleep 30
-      - run:
-          name: send keyevent
-          command: adb shell input keyevent 82             
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}             
       - run:
           name: Run Tests
           command: ./gradlew connectedAndroidTest
