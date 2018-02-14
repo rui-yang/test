@@ -24,7 +24,8 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-          
+   test:
+     override:
       # start the emulator
       - emulator -avd circleci-android26 -no-audio -no-window:
           background: true
