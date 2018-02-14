@@ -27,7 +27,7 @@ jobs:
       - run:
           name: start the emulator
           command: emulator -avd circleci-android26 -no-audio -no-window:
-            background: true
+          background: true
       - run:
           name: wait for it to have booted
           command: circle-android wait-for-boot
