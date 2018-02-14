@@ -26,7 +26,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}  
       - run:
         name: start the emulator
-        command: emulator -avd circleci-android26 -no-audio -no-window:
+        command: emulator -avd circleci-android26 -no-audio -no-window
           background: true
           parallel: true
       - run:
