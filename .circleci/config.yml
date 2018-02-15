@@ -36,7 +36,7 @@ jobs:
           command: circle-android wait-for-boot
       - run:
           name: adb log
-          command: adb logcat -d
+          command: adb logcat -d > $CIRCLE_ARTIFACTS/logcat_emulator.txt
 #      - run:
 #          name: Remove lock screen
 #          command: adb shell input keyevent 82        
@@ -48,6 +48,4 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-      - run:
-          name: collect adb log
-          command: adb logcat -d > $CIRCLE_ARTIFACTS/logcat_emulator.txt
+
