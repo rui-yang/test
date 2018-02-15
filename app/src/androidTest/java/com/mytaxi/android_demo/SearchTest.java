@@ -4,6 +4,7 @@ package com.mytaxi.android_demo;
  * Created by ruiyang on 2/14/2018.
  */
 
+import android.support.test.espresso.Root;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
