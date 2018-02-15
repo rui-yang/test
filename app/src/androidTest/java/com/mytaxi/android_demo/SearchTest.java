@@ -45,7 +45,7 @@ public class SearchTest {
         onView(withId(R.id.textSearch)).perform(typeText(mStringToSearch), closeSoftKeyboard());
 
         //select the driver
-        onView(withText(mExpectedString)).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).perform(click());
+        onView(withText(mExpectedString)).inRoot(withDecorView(not(mActivityRule.getActivity().getWindow().getDecorView()))).perform(click());
 
         //check the details of driver's profile
         onView(withId(R.id.textViewDriverName)).check(matches(withText(mExpectedString)));
