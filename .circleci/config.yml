@@ -34,9 +34,9 @@ jobs:
       - run:
           name: Wait for emulator
           command: circle-android wait-for-boot
-      - run:
-          name: Remove lock screen
-          command: adb shell input keyevent 82        
+#      - run:
+#          name: Remove lock screen
+#          command: adb shell input keyevent 82        
       - run:
           name: Run Tests
           command: ./gradlew connectedAndroidTest
