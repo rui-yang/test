@@ -18,6 +18,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -41,7 +42,7 @@ public class SearchTest {
     public void testSearchDriver() throws Exception{
 
         //search the string
-        onView(withId(R.id.textSearch)).perform(typeText(mStringToSearch));
+        onView(withId(R.id.textSearch)).perform(typeText(mStringToSearch), closeSoftKeyboard());
 
         //select the driver
         ViewInteraction mSearchedTextView = onView(withText(mExpectedString)).inRoot(withDecorView(not(is(mActivityRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
