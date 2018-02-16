@@ -49,7 +49,7 @@ public class SearchTest {
         Thread.sleep(1000);
         //select the driver
         Matcher<Root> rootMatcher = withDecorView(not(mActivityRule.getActivity().getWindow().getDecorView()));
-        onView(withText(mExpectedString)).inRoot(rootMatcher).perform(click());
+        onView(withText(mExpectedString)).inRoot(rootMatcher).perform(scrollTo(), click());
 
         //check the details of driver's profile
         onView(withId(R.id.textViewDriverName)).check(matches(withText(mExpectedString)));
