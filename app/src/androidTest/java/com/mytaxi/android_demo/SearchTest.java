@@ -46,7 +46,7 @@ public class SearchTest {
 
         //search the string
         onView(withId(R.id.textSearch)).perform(typeText(mStringToSearch));
-
+        Thread.sleep(1000);
         //select the driver
         Matcher<Root> rootMatcher = withDecorView(not(mActivityRule.getActivity().getWindow().getDecorView()));
         onView(withText(mExpectedString)).inRoot(rootMatcher).perform(click());
