@@ -38,7 +38,7 @@ public class SearchTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
 
-    private String mStringToSearch = "sa";
+    private String mStringToSearch = "sara";
     private String mExpectedString = "Sarah Friedrich";
 
     @Test
