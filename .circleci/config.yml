@@ -57,7 +57,7 @@ jobs:
           path: app/build/reports
           destination: reports
       - store_test_results:
-          path: app/build/androidTest-results          
+          path: app/build/outputs/androidTest-results      
 
  
 
