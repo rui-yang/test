@@ -43,7 +43,7 @@ jobs:
 #          command: adb shell input keyevent 82        
       - run:
           name: Run Tests
-          command: ./gradlew connectedAndroidTest -PdisablePreDex
+          command: ./gradlew lint connectedAndroidTest -PdisablePreDex
       - run:
           name: collect adb log
           command: adb logcat -d > chmod +x app/build/report/logcat_emulator.txt
@@ -57,7 +57,7 @@ jobs:
           path: app/build/reports
           destination: reports
       - store_test_results:
-          path: app/build/reports          
+          path: app/build/androidTest-results          
 
  
 
