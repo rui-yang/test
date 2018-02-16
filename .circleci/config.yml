@@ -52,10 +52,11 @@ jobs:
             mkdir -p ~/reports/
             find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/reports/ \;
           when: always
-      - store_artifacts:
-          path: app/build/reports
-          destination: reports
       - store_test_results:
           path: ~/reports
+      - store_artifacts:
+          path: ~/reports
+          destination: reports
+
  
 
