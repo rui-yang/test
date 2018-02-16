@@ -45,7 +45,7 @@ public class SearchTest {
     public void testSearchDriver() throws Exception{
 
         //search the string
-        onView(withId(R.id.textSearch)).perform(typeText(mStringToSearch), closeSoftKeyboard());
+        onView(withId(R.id.textSearch)).perform(typeText(mStringToSearch));
 
         //select the driver
         Matcher<Root> rootMatcher = withDecorView(not(mActivityRule.getActivity().getWindow().getDecorView()));
