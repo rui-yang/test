@@ -31,13 +31,6 @@ public class LoginTest {
     private String mPassword = "video";;
 
     @Test
-    public void testLoginFailure() throws Exception {
-        onView(withId(R.id.edt_username)).perform(typeText(mUserName));
-        onView(withId(R.id.edt_password)).perform(typeText(mPassword));
-        onView(withId(R.id.btn_login)).perform(click());
-    }
-
-    @Test
     public void testLoginSuccess() throws Exception {
         onView(withId(R.id.edt_username)).perform(typeText(mUserName));
         onView(withId(R.id.edt_password)).perform(typeText(mPassword));
