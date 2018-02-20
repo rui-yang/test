@@ -37,7 +37,7 @@ jobs:
           command: circle-android wait-for-boot
       - run:
           name: Sleep
-          command: sleep 60
+          command: sleep 30
  #     - run:
  #         name: Remove lock screen
  #         command: adb shell input keyevent 82        
