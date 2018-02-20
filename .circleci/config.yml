@@ -46,7 +46,7 @@ jobs:
           command: ./gradlew lint connectedAndroidTest -PdisablePreDex
       - run:
           name: collect adb log
-          command: adb logcat -d > chmod +x app/build/reports/logcat_emulator.txt
+          command: adb logcat -d > chmod +x app/build/reports/androidTest/connected/logcat_emulator.txt
  #     - run:
  #         name: copy the build outputs to artifacts
  #         command: cp -r app/build/outputs $CIRCLE_ARTIFACTS
